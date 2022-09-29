@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration status="DEBUG">
+	<Properties>
+		<Property name="layoutPattern">%d{ISO8601} %t %-5p %m%n</Property>
+	</Properties>
+
+	<Appenders>
+		<Console name="console" target="SYSTEM_OUT">
+			<PatternLayout pattern="${layoutPattern}"/>
+		</Console>
+
+		<RollingFile name="library">
+			<FileName>../logs/fastcampus_library.log</FileName>
+			<FilePattern>../logs/fastcampus_library.log.%i</FilePattern>
+			<PatternLayout pattern="${layoutPattern}" />
+			<Policies>
+				<SizeBasedTriggeringPolicy size="10MB"/>
+			</Policies>
+			<DefaultRolloverStrategy max="10" fileIndex="min"/>
+		</RollingFile>
+
+		<RollingFile name="fastcampus">
+			<FileName>../logs/fastcampus.log</FileName>
+			<FilePattern>../logs/fastcampus.log.%i</FilePattern>
+			<PatternLayout pattern="${layoutPattern}" />
+			<Policies>
+				<SizeBasedTriggeringPolicy size="10MB"/>
+			</Policies>
+			<DefaultRolloverStrategy max="10" fileIndex="min"/>
+		</RollingFile>
+	</Appenders>
+
+	<Loggers>
+		<Logger name="org" level="DEBUG" additivity="false">
+			<AppenderRef ref="library"/>
+		</Logger>
+
+		<Logger name="com.hs.fastcampus.ch4" level="DEBUG" additivity="false">
+			<AppenderRef ref="fastcampus"/>
+		</Logger>
+
+		<Root level="DEBUG" additivity="true">
+			<AppenderRef ref="console"/>
+		</Root>
+	</Loggers>
+</Configuration>
