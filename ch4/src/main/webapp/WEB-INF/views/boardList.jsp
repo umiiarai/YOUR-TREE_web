@@ -158,10 +158,14 @@
     		</li>
         <li id="appname">YOUR TREE</li>
         <li><a href="<c:url value='/'/>">Home</a></li>
-        <li><a href="<c:url value='/board/list'/>">게시판</a></li>
-        <li><a href="<c:url value='/login/login'/>">로그인</a></li>
-        <li><a href="<c:url value='/register/add'/>">회원가입</a></li>
-        <li><a href="<c:url value='/register/update'/>">마이페이지</a></li>
+        <li><a href="<c:url value='/board/list'/>">Board</a></li>
+        <li><a href="<c:url value='${loginOutLink}'/>">${loginOut}</a></li>
+        <li><a href="<c:url value='/register/add'/>">Sign in</a></li>
+        <li><a href="<c:url value='/register/update'/>">update</a></li>
+        <li><a href="<c:url value='/register/select'/>">select</a></li>
+        <li><a href="<c:url value='/register/Allselect'/>">Allselect</a></li>
+        <li><a href="<c:url value='/new_Info/new'/>">NEW</a></li>
+        <li><a href="<c:url value='/login/mypage'/>">MYPAGE</a></li>
         <li><a href=""><i class="fa fa-search"></i></a></li>
   </ul>
 </div>
