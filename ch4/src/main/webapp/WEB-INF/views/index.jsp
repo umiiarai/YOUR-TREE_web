@@ -7,7 +7,6 @@
 <c:set var="loginOut" value="${loginId=='' ? 'Login' : 'ID='+=loginId}"/>
 <!DOCTYPE html>
 <html>
-<head>
     <meta charset="UTF-8">
     <title>YOUR TREE</title>
     <link rel="stylesheet" href="<c:url value='/css/headers.css'/>">
