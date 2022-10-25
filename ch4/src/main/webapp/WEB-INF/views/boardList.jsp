@@ -9,8 +9,8 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <title>fastcampus</title>
-    <link rel="stylesheet" href="<c:url value='/css/menu.css'/>">
+    <title>YOURTREE</title>
+    <link rel="stylesheet" href="<c:url value='/css/headers.css'/>">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="https://code.jquery.com/jquery-1.11.3.js"></script>
     <style>
@@ -153,8 +153,10 @@
 <body>
 <div id="menu">
     <ul>
-    <ul>
-        <li id="logo">YOUR TREE</li>
+    <li id="logo">
+    		<img src="image/peach.png" alt="이미지">
+    		</li>
+        <li id="appname">YOUR TREE</li>
         <li><a href="<c:url value='/'/>">Home</a></li>
         <li><a href="<c:url value='/board/list'/>">Board</a></li>
         <li><a href="<c:url value='${loginOutLink}'/>">${loginOut}</a></li>
@@ -165,7 +167,7 @@
         <li><a href="<c:url value='/new_Info/new'/>">NEW</a></li>
         <li><a href="<c:url value='/login/mypage'/>">MYPAGE</a></li>
         <li><a href=""><i class="fa fa-search"></i></a></li>
-    </ul>
+  </ul>
 </div>
 <script>
 	//${document}.ready(function() {
