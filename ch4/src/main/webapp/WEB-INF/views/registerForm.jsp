@@ -8,6 +8,7 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+     <link rel="stylesheet" href="<c:url value='/css/headers.css'/>">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css" />
     <style>
@@ -68,9 +69,23 @@
     <title>Register</title>
 </head>
 <body>
+<div id="menu">
+  <ul>
+    <li id="logo">
+    		<img src="image/peach.png" alt="이미지">
+    		</li>
+        <li id="appname">YOUR TREE</li>
+        <li><a href="<c:url value='/'/>">Home</a></li>
+        <li><a href="<c:url value='/board/list'/>">게시판</a></li>
+        <li><a href="<c:url value='/login/login'/>">로그인</a></li>
+        <li><a href="<c:url value='/register/add'/>">회원가입</a></li>
+        <li><a href="<c:url value='/register/update'/>">마이페이지</a></li>
+        <li><a href=""><i class="fa fa-search"></i></a></li>
+  </ul>
+</div>
    <!--form action="<c:url value="/register/save"/>" method="POST" onsubmit="return formCheck(this)"-->
    <form:form modelAttribute="user">
-    <div class="title">Register</div>
+    <div class="title">회원가입</div>
     <div id="msg" class="msg"> ${URLDecoder.decode(param.msg, "utf-8")} <form:errors path="id"/></div>
     <label for="">아이디</label>
     <input class="input-field" type="text" name="id" placeholder="8~12자리의 영대소문자와 숫자 조합">
