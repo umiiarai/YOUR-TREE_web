@@ -17,7 +17,7 @@
     </select>
 
     <insert id="insertUser" parameterType="User">
-        INSERT INTO user_info VALUES (#{id},#{pwd},#{name},#{email},#{birth},#{sns}, now())
+        INSERT INTO user_info VALUES (#{id},#{pwd},#{name},#{email},#{birth},#{sns})
     </insert>
 
     <update id="updateUser" parameterType="User">

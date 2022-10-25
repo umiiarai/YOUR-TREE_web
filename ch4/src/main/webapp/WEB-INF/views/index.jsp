@@ -24,6 +24,7 @@
         <li><a href="<c:url value='/register/select'/>">select</a></li>
         <li><a href="<c:url value='/register/Allselect'/>">Allselect</a></li>
         <li><a href="<c:url value='/new_Info/new'/>">NEW</a></li>
+        <li><a href="<c:url value='/login/mypage'/>">MYPAGE</a></li>
         <li><a href=""><i class="fa fa-search"></i></a></li>
     </ul>
 </div>
