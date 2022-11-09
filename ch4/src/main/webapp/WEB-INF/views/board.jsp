@@ -66,14 +66,22 @@
 </head>
 <body>
 <div id="menu">
-    <ul>
-        <li id="logo">YOURTREE</li>
-        <li><a href="<c:url value='/'/>">Home</a></li>
-        <li><a href="<c:url value='/board/list'/>">Board</a></li>
-        <li><a href="<c:url value='/register/add'/>">Sign in</a></li>
-        <li><a href=""><i class="fa fa-search"></i></a></li>
-    </ul>
-</div>
+		<ul>
+			<li id="logo"><img src="http://localhost:8080/ch4/image/peach.png" alt="이미지" width="50px">
+			</li>
+			<li id="logo">YOUR TREE</li>
+			<li><a href="<c:url value='/'/>">Home</a></li>
+			<li><a href="<c:url value='${loginOutLink}'/>">${loginOut}</a></li>
+			<li><a href="<c:url value='/register/add'/>">Sign in</a></li>
+			<li><a href="<c:url value='/register/update'/>">update</a></li>
+			<li><a href="<c:url value='/register/select'/>">select</a></li>
+			<li><a href="<c:url value='/register/Allselect'/>">Allselect</a></li>
+			<li><a href="<c:url value='/new_Info/new'/>">NEW</a></li>
+			<li><a href="<c:url value='/board/list'/>">Board</a></li>
+			<li><a href="<c:url value='/login/mypage'/>">MYPAGE</a></li>
+			<li><a href=""><i class="fa fa-search"></i></a></li>
+		</ul>
+	</div>
 <script>
     let msg = "${msg}";
     if(msg=="WRT_ERR") alert("게시물 등록에 실패하였습니다. 다시 시도해 주세요.");
