@@ -10,22 +10,31 @@ ul {
     list-style-type: none;
     height: 48px;
     width: 100%;
-    background-color: #30426E;
+    background-color: 	#68D168;
     display: flex;
 }
 
 ul > li {
-    color: lightgray;
+    color: rgb(0, 128, 128);
     height : 100%;
-    width:90px;
+    width:200px;
     display:flex;
+    font-size: 30px;
     align-items: center;
 }
 
 ul > li > a {
-    color: lightgray;
+    color: rgb(255, 255, 255);
     margin:auto;
     padding: 10px;
+    width:90px;
+    font-size:20px;
+    align-items: center;
+}
+
+ul > li > a > i {
+    color: rgb(255, 128, 192);
+    margin:auto;
     font-size:20px;
     align-items: center;
 }
@@ -35,10 +44,10 @@ ul > li > a:hover {
     border-bottom: 3px solid rgb(209, 209, 209);
 }
 
-#logo {
-    color:white;
+/*#logo {
+    color: "#006400";
     font-size: 18px;
     padding-left:40px;
     margin-right:auto;
     display: flex;
-}
+ } */

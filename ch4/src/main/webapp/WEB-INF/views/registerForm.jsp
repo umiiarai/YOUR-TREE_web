@@ -8,7 +8,7 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-     <link rel="stylesheet" href="<c:url value='/css/headers.css'/>">
+     <link rel="stylesheet" href="<c:url value='/css/menu.css'/>">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css" />
     <style>
@@ -70,19 +70,22 @@
 </head>
 <body>
 <div id="menu">
-  <ul>
-    <li id="logo">
-    		<img src="image/peach.png" alt="이미지">
-    		</li>
-        <li id="appname">YOUR TREE</li>
-        <li><a href="<c:url value='/'/>">Home</a></li>
-        <li><a href="<c:url value='/board/list'/>">게시판</a></li>
-        <li><a href="<c:url value='/login/login'/>">로그인</a></li>
-        <li><a href="<c:url value='/register/add'/>">회원가입</a></li>
-        <li><a href="<c:url value='/register/update'/>">마이페이지</a></li>
-        <li><a href=""><i class="fa fa-search"></i></a></li>
-  </ul>
-</div>
+		<ul>
+			<li id="logo"><img src="http://localhost:8080/ch4/image/peach.png" alt="이미지" width="50px">
+			</li>
+			<li id="logo">YOUR TREE</li>
+			<li><a href="<c:url value='/'/>">Home</a></li>
+			<li><a href="<c:url value='${loginOutLink}'/>">${loginOut}</a></li>
+			<li><a href="<c:url value='/register/add'/>">Sign in</a></li>
+			<li><a href="<c:url value='/register/update'/>">update</a></li>
+			<li><a href="<c:url value='/register/select'/>">select</a></li>
+			<li><a href="<c:url value='/register/Allselect'/>">Allselect</a></li>
+			<li><a href="<c:url value='/new_Info/new'/>">NEW</a></li>
+			<li><a href="<c:url value='/board/list'/>">Board</a></li>
+			<li><a href="<c:url value='/login/mypage'/>">MYPAGE</a></li>
+			<li><a href=""><i class="fa fa-search"></i></a></li>
+		</ul>
+	</div>
    <!--form action="<c:url value="/register/save"/>" method="POST" onsubmit="return formCheck(this)"-->
    <form:form modelAttribute="user">
     <div class="title">회원가입</div>
