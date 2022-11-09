@@ -1,0 +1,78 @@
+* {
+	box-sizing: border-box;
+}
+
+a {
+	text-decoration: none;
+}
+
+h1 {
+	display: block;
+	font-size: 6em;
+	margin-top: 0.67em;
+	margin-left: 0;
+	margin-right: 0;
+	font-weight: bold;
+	text-align: center;
+	color:  rgb(000, 153, 000);
+}
+
+h2 {
+	display: block;
+	font-size: 1.5em;
+	margin-top: 0.83em;
+	margin-bottom: 0.83em;
+	margin-left: 0;
+	margin-right: 0;
+	font-weight: bold;
+	text-align: center;
+}
+
+h3 {
+	display: block;
+	font-size: 1.5em;
+	margin-top: 1em;
+	margin-bottom: 1em;
+	margin-left: 0;
+	margin-right: 0;
+	font-weight: bold;
+	padding: 5px 10px;
+/*  상자내무 간격 : 위아래 5px, 오른쪽왼쪽 15px  */
+  border-bottom:1px solid #848484;
+/*  밑줄 라인 색상,굵기,선종류 설정가능  */
+  border-left:8px solid #848484;
+ /*  왼쪽 라인 색상,굵기,선종류 설정가능  */
+}
+
+h4 {
+	display: block;
+	font-size: 1.2em;
+	margin-top: 1.33em;
+	margin-bottom: 1.33em;
+	margin-left: 0;
+	margin-right: 0;
+	font-weight: bold;
+	padding: 5px 15px;
+/*  상자내부 간격 : 위아래 5px, 오른쪽왼쪽 15px  */
+  background: #eee;
+/* 배경색 컬러코드로 변경가능   */
+  border-radius: 10px;
+/*  테두리 둥근처리 숫자로 조정가능  */
+}
+
+h5 {
+	display: block;
+	font-size: 1.7em;
+	margin-top: 1.33em;
+	margin-bottom: 1.33em;
+	margin-left: 0;
+	margin-right: 0;
+	font-weight: bold;
+	text-align: center;
+}
+
+hr {
+    border: 0;
+    height: 1px;
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
+}
