@@ -11,6 +11,7 @@ public class BoardDto {
     private int view_cnt;
     private int comment_cmt;    // 댓글 개수
     private Date reg_date;
+    private int love;
 
     public BoardDto(){}
     public BoardDto(String title, String content, String writer) {
@@ -29,6 +30,7 @@ public class BoardDto {
                 ", view_cnt=" + view_cnt +
                 ", comment_cmt=" + comment_cmt +
                 ", reg_date=" + reg_date +
+                ", love=" + love +
                 '}';
     }
 
@@ -99,5 +101,13 @@ public class BoardDto {
 
     public void setReg_date(Date reg_date) {
         this.reg_date = reg_date;
+    }
+    
+    public int getLove() {
+        return love;
+    }
+
+    public void setLove(int love) {
+        this.love = love;
     }
 }

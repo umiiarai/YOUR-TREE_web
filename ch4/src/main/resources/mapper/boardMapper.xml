@@ -23,20 +23,20 @@
     </insert>
 
     <select id="selectAll" resultType="BoardDto">
-        SELECT bno, title, content, writer, view_cnt, comment_cnt, reg_date
+        SELECT bno, title, content, writer, view_cnt, comment_cnt, reg_date, love
         FROM board
         ORDER BY reg_date DESC, bno DESC
     </select>
 
     <select id="select" parameterType="int" resultType="BoardDto">
         SELECT bno, title, content, writer
-             , view_cnt, comment_cnt, reg_date
+             , view_cnt, comment_cnt, reg_date, love
         FROM board
         WHERE bno = #{bno}
     </select>
 
     <select id="selectPage" parameterType="map" resultType="BoardDto">
-        SELECT bno, title, content, writer, view_cnt, comment_cnt, reg_date
+        SELECT bno, title, content, writer, view_cnt, comment_cnt, reg_date, love
         FROM board
         ORDER BY reg_date DESC, bno DESC
             LIMIT #{offset}, #{pageSize}
@@ -70,11 +70,21 @@
             </otherwise>
         </choose>
     </sql>
+    
     <select id="searchSelectPage" parameterType="SearchCondition" resultType="BoardDto">
-        SELECT bno, title, content, writer, view_cnt, comment_cnt, reg_date
+        SELECT bno, title, content, writer, view_cnt, comment_cnt, reg_date, love
         FROM board
         WHERE true
         <include refid="searchCondition" />
+        ORDER BY reg_date DESC, bno DESC
+            LIMIT #{offset}, #{pageSize}
+    </select>
+    
+    <select id="searchSelectPage_love" parameterType="SearchCondition" resultType="BoardDto">
+        SELECT bno, title, content, writer, view_cnt, comment_cnt, reg_date, love
+        FROM board
+        WHERE true and love = 1
+<!--         <include refid="searchCondition" /> -->
         ORDER BY reg_date DESC, bno DESC
             LIMIT #{offset}, #{pageSize}
     </select>
