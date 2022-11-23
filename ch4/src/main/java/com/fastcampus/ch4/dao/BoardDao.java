@@ -27,6 +27,8 @@ public interface BoardDao {
     int increaseViewCnt(Integer bno) throws Exception;
 
     List<BoardDto> searchSelectPage(SearchCondition sc) throws Exception;
+    
+    List<BoardDto> searchSelectPage_love(SearchCondition sc) throws Exception;
 
     int searchResultCnt(SearchCondition sc) throws Exception;
 }

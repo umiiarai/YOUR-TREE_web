@@ -69,6 +69,11 @@ public class BoardDaoImpl implements BoardDao {
     public List<BoardDto> searchSelectPage(SearchCondition sc) throws Exception {
         return session.selectList(namespace+"searchSelectPage", sc);
     }
+    
+    @Override
+    public List<BoardDto> searchSelectPage_love(SearchCondition sc) throws Exception {
+        return session.selectList(namespace+"searchSelectPage_love", sc);
+    }
 
     @Override
     public int searchResultCnt(SearchCondition sc) throws Exception {
